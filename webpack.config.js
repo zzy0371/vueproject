@@ -11,6 +11,7 @@ module.exports = {
 		devServer:{
 			open:true,
 			port:4000,
+			// host:"192.168.191.1"
 			// contentBase:'src',
 			hot:true
 		},

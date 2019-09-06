@@ -1,21 +1,18 @@
 import Vue from 'vue'
 import App from './components/App.vue'
 
-import 'mint-ui/lib/style.css'
+import Vant from 'vant';
+import 'vant/lib/index.css';
+Vue.use(Vant);
 
-import { Header,Swipe, SwipeItem } from 'mint-ui';
-Vue.component(Header.name, Header);
-Vue.component(Swipe.name, Swipe);
-Vue.component(SwipeItem.name, SwipeItem);
-
-
-import './lib/mui/css/mui.css'
-import './lib/mui/css/icons-extra.css'
 
 import router from './router.js'
 
+
 import VueResource from 'vue-resource'
 Vue.use(VueResource)
+
+
 
 const vm = new Vue({
 	el:"#app",
@@ -23,4 +20,9 @@ const vm = new Vue({
 		return creatEle(App)
 	},
 	router
+})
+
+Vue.filter("timeformat",function(value,pattern="YYYY-MM-DD HH:mm:ss"){
+	
+	
 })
